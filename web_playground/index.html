@@ -1,33 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>SLEET KEY</title>
-        <link rel="shortcut icon" type="image/x-icon" href="img/Blank-Blank-logo.jpeg" />
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="A sleet template">
-        <meta name="author" content="Sleet Design">
+<head>
+    <title>SLEET KEY</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/key.svg" />
 
-        <style>
-            @import url('css/index.css');
-            @import url('');
-        </style>
-        
-    </head>
-    <body>
-        <header>
-            <h1>SLEET KEY</h1>
-            <p>label your new account keys</p>
-        </header>
-        <article>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A sleet template">
+    <meta name="author" content="Sleet Design">
 
-        </article>
+    <style>
+        @import url('css/index.css');
+        @import url('');
+    </style>
 
-        <footer>Copyright&copy: 2024 by <a href="https://gitlab.com/sleet-dev">Sleet Design</a></footer>
+</head>
 
-        <!-- goatcounter  -->
-        <script data-goatcounter="https://sleet.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-        
-    </body>
+<body>
+    <header>
+        <h1>SLEET KEY</h1>
+        <p>label your near account keys</p>
+
+        <form class="key_search_form">
+        <input type="text" placeholder="account.near" name="key_search_input">
+        <button type="submit">SEARCH</button>
+        </form>
+
+    </header>
+    <article>
+
+        <div class="key_div">
+        <h2 contenteditable="true">KEY NAME</h2>
+        <p>
+            {key here}
+        </p>
+        </div>
+
+    </article>
+
+    <button class="key_save">SAVE</button>
+
+    <footer>Copyright&copy: 2024 by <a href="https://gitlab.com/sleet-dev">Sleet Design</a></footer>
+
+    <!-- goatcounter  -->
+    <script data-goatcounter="https://sleet.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+
 </html>

@@ -1,16 +1,44 @@
-body {
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Offside&display=swap');
 
+.offside-regular {
+    font-family: "Offside", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body {
+    text-align: center;
+
+
+    font-family: "Offside", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    padding: 20px;
 }
 
 header {
-
+    margin: 20px;
 }
+
 article {
 
 }
-p {
 
+/* p {} */
+
+
+.key_div {
+    text-align: left;
+    /* width: 80%; */
+    border: 2px solid black;
+    border-radius: 3px;
 }
-footer {
 
+footer {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
 }
