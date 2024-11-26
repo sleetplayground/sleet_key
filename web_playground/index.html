@@ -18,30 +18,34 @@
 </head>
 
 <body>
+
+    
     <header>
         <h1>SLEET KEY</h1>
         <p>label your near account keys</p>
-
+    
         <form class="key_search_form">
-        <input type="text" placeholder="account.near" name="key_search_input">
-        <button type="submit">SEARCH</button>
+            <input type="text" placeholder="account.near" name="key_search_input" id="key_search_input">
+            <button type="submit">SEARCH</button>
         </form>
-
     </header>
     <article>
-
         <div class="key_div">
-        <h2 contenteditable="true">KEY NAME</h2>
-        <p>
-            {key here}
-        </p>
+            <h2 contenteditable="true">KEY NAME</h2>
+            <p class="key_type">{key type}</p>
+            <p class="ed25519">{key here}</p>
         </div>
-
     </article>
-
+    
     <button class="key_save">SAVE</button>
+    
 
     <footer>Copyright&copy: 2024 by <a href="https://gitlab.com/sleet-dev">Sleet Design</a></footer>
+
+
+    <!-- Functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/near-api-js"></script>
+    <script src="js/script.js"></script>
 
     <!-- goatcounter  -->
     <script data-goatcounter="https://sleet.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
