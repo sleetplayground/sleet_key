@@ -1,3 +1,23 @@
+:root {
+    --color-primary: #7d84b2;
+    --color-primary-light: #8089b7;
+    --color-primary-lighter: #8e9dcc;
+    --color-primary-lightest: #d9dbf1;
+    --color-background: #f9f9ed;
+    --color-surface: #ffffff;
+    --color-text: #000000;
+    --color-text-light: #666666;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: #000000;
+        --color-surface: #1a1a1a;
+        --color-text: #f9f9ed;
+        --color-text-light: #d9dbf1;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,13 +27,13 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
+    color: var(--color-text);
+    background-color: var(--color-background);
 }
 
 header {
-    background-color: #0072CE;
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-surface);
     padding: 2rem;
     text-align: center;
 }
@@ -39,14 +59,16 @@ header p {
 #key_search_input {
     flex: 1;
     padding: 0.8rem;
-    border: 2px solid #ddd;
+    border: 2px solid var(--color-primary-lightest);
     border-radius: 4px;
     font-size: 1rem;
+    background-color: var(--color-surface);
+    color: var(--color-text);
 }
 
 button {
-    background-color: #0072CE;
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-surface);
     border: none;
     padding: 0.8rem 1.5rem;
     border-radius: 4px;
@@ -56,7 +78,7 @@ button {
 }
 
 button:hover {
-    background-color: #005ba3;
+    background-color: var(--color-primary-light);
 }
 
 #key_container {
@@ -66,7 +88,7 @@ button:hover {
 }
 
 .key_div {
-    background: white;
+    background: var(--color-surface);
     border-radius: 8px;
     padding: 1.5rem;
     margin-bottom: 1rem;
@@ -74,29 +96,31 @@ button:hover {
 }
 
 .key_div h2[contenteditable='true'] {
-    border-bottom: 2px solid #0072CE;
+    border-bottom: 2px solid var(--color-primary);
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
     outline: none;
+    color: var(--color-text);
 }
 
 .key_type {
     display: inline-block;
-    background: #e8f4ff;
+    background: var(--color-primary-lightest);
     padding: 0.3rem 0.8rem;
     border-radius: 4px;
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
-    color: #0072CE;
+    color: var(--color-primary);
 }
 
 .ed25519 {
     font-family: monospace;
-    background: #f5f5f5;
+    background: var(--color-background);
     padding: 1rem;
     border-radius: 4px;
     overflow-wrap: break-word;
     font-size: 0.9rem;
+    color: var(--color-text);
 }
 
 .key_save {
@@ -114,12 +138,12 @@ button:hover {
 footer {
     text-align: center;
     padding: 2rem;
-    color: #666;
+    color: var(--color-text-light);
     font-size: 0.9rem;
 }
 
 footer a {
-    color: #0072CE;
+    color: var(--color-primary);
     text-decoration: none;
 }
 
