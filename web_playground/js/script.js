@@ -1,5 +1,5 @@
-const nearAPI = require("near-api-js");
-const { connect, keyStores, KeyPair } = nearAPI;
+import { connect, keyStores } from 'https://unpkg.com/near-api-js@1.1.0/dist/near-api-js.min.js';
+
 const keyStore = new keyStores.BrowserLocalStorageKeyStore();
 
 async function getAccountPublicKey(accountId) {
@@ -23,19 +23,49 @@ document.querySelector('.key_search_form').addEventListener('submit', async (eve
 
     const keys = await getAccountPublicKey(accountId);
 
-    if (keys.length > 0) {
-        document.querySelector('.key_type').textContent = keys[0].access_key.permission.FunctionCall.receiver_id;
-        document.querySelector('.ed25519').textContent = keys[0].public_key;
+    const keyContainer = document.getElementById('key_container');
+    keyContainer.innerHTML = ''; // Clear previous results
+
+    if (keys.length === 0) {
+        keyContainer.innerHTML = '<p class="error">No keys found for this account</p>';
+        return;
     }
+
+    keys.forEach((key, index) => {
+        const keyDiv = document.createElement('div');
+        keyDiv.className = 'key_div';
+
+        const keyName = document.createElement('h2');
+        keyName.contentEditable = 'true';
+        keyName.textContent = `KEY NAME ${index + 1}`;
+
+        const keyType = document.createElement('p');
+        keyType.className = 'key_type';
+        keyType.textContent = key.access_key.permission === 'FullAccess' ? 'full' : 'limited';
+
+        const publicKey = document.createElement('p');
+        publicKey.className = 'ed25519';
+        publicKey.textContent = key.public_key;
+
+        keyDiv.appendChild(keyName);
+        keyDiv.appendChild(keyType);
+        keyDiv.appendChild(publicKey);
+
+        keyContainer.appendChild(keyDiv);
+    });
 });
 
 document.querySelector('.key_save').addEventListener('click', () => {
     const accountId = document.querySelector('#key_search_input').value;
-    const keyName = document.querySelector('h2[contenteditable="true"]').textContent;
-    const keyType = document.querySelector('.key_type').textContent;
-    const publicKey = document.querySelector('.ed25519').textContent;
+    const keyDivs = document.querySelectorAll('.key_div');
+    let markdownContent = `# ${accountId}\naccount keys\n`;
 
-    const markdownContent = `# ${accountId}\naccount keys\n## ${keyName}\n${keyType}\n\`\`\`\n${publicKey}\n\`\`\``;
+    keyDivs.forEach(keyDiv => {
+        const keyName = keyDiv.querySelector('h2').textContent;
+        const keyType = keyDiv.querySelector('.key_type').textContent;
+        const publicKey = keyDiv.querySelector('.ed25519').textContent;
+
+        markdownContent += `## ${keyName}\n${keyType}\n\`\`\`\n${publicKey}\n\`\`\`\n`;
 
     const blob = new Blob([markdownContent], { type: 'text/markdown' });
     const url = URL.createObjectURL(blob);

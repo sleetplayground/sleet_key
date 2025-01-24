@@ -1,44 +1,128 @@
-/* FONT */
-@import url('https://fonts.googleapis.com/css2?family=Offside&display=swap');
-
-.offside-regular {
-    font-family: "Offside", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
 body {
-    text-align: center;
-
-
-    font-family: "Offside", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-
-    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
 }
 
 header {
-    margin: 20px;
+    background-color: #0072CE;
+    color: white;
+    padding: 2rem;
+    text-align: center;
 }
 
-article {
-
+header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
 }
 
-/* p {} */
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
 
+.key_search_form {
+    margin: 2rem auto;
+    max-width: 600px;
+    display: flex;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+#key_search_input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #0072CE;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #005ba3;
+}
+
+#key_container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
 
 .key_div {
-    text-align: left;
-    /* width: 80%; */
-    border: 2px solid black;
-    border-radius: 3px;
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.key_div h2[contenteditable='true'] {
+    border-bottom: 2px solid #0072CE;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    outline: none;
+}
+
+.key_type {
+    display: inline-block;
+    background: #e8f4ff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #0072CE;
+}
+
+.ed25519 {
+    font-family: monospace;
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-wrap: break-word;
+    font-size: 0.9rem;
+}
+
+.key_save {
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+}
+
+.error {
+    color: #d32f2f;
+    text-align: center;
+    padding: 1rem;
 }
 
 footer {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #0072CE;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
