@@ -15,4 +15,18 @@ Colors
 #d9dbf1
 ```
 
-F
+Fonts
+
+* Primary System Fonts:
+  * -apple-system
+  * BlinkMacSystemFont
+  * 'Segoe UI'
+  * Roboto
+  * Oxygen
+  * Ubuntu
+  * Cantarell
+  * sans-serif
+
+* Monospace Font (for code display):
+  * monospace
+
