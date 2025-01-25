@@ -5,13 +5,13 @@
     --color-primary-lightest: #d9dbf1;
     --color-background: #f9f9ed;
     --color-surface: #ffffff;
-    --color-text: #000000;
+    --color-text: #313638;
     --color-text-light: #666666;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-background: #000000;
+        --color-background: #313638;
         --color-surface: #1a1a1a;
         --color-text: #f9f9ed;
         --color-text-light: #d9dbf1;
