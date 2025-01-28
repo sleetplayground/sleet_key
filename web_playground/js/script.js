@@ -4,12 +4,14 @@ const keyStore = new nearAPI.keyStores.BrowserLocalStorageKeyStore();
 
 async function getAccountPublicKey(accountId) {
     try {
+        const isTestnet = accountId.endsWith('.testnet');
+        const networkId = isTestnet ? 'testnet' : 'mainnet';
         const config = {
-            networkId: "mainnet",
+            networkId,
             keyStore,
-            nodeUrl: "https://rpc.mainnet.near.org",
-            walletUrl: "https://wallet.mainnet.near.org",
-            helperUrl: "https://helper.mainnet.near.org",
+            nodeUrl: `https://rpc.${networkId}.near.org`,
+            walletUrl: `https://wallet.${networkId}.near.org`,
+            helperUrl: `https://helper.${networkId}.near.org`,
         };
 
         console.log('Connecting to NEAR with config:', config);
