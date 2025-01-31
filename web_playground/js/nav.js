@@ -16,13 +16,13 @@ function createNavBar() {
 
     const logo = document.createElement('a');
     logo.href = 'index.html';
-    logo.style.cssText = `
-        color: #ffffff;
-        text-decoration: none;
-        font-size: 1.5rem;
-        font-weight: bold;
+    const logoImg = document.createElement('img');
+    logoImg.src = 'img/key.svg';
+    logoImg.style.cssText = `
+        height: 2rem;
+        filter: brightness(0) invert(1);
     `;
-    logo.textContent = 'SLEET KEY';
+    logo.appendChild(logoImg);
 
     const links = document.createElement('div');
     links.style.cssText = `
@@ -32,7 +32,7 @@ function createNavBar() {
 
     const homeLink = document.createElement('a');
     homeLink.href = 'index.html';
-    homeLink.textContent = 'Home';
+    homeLink.textContent = 'LABEL';
     homeLink.style.cssText = `
         color: #ffffff;
         text-decoration: none;
@@ -44,7 +44,7 @@ function createNavBar() {
 
     const createLink = document.createElement('a');
     createLink.href = 'create.html';
-    createLink.textContent = 'Create';
+    createLink.textContent = 'CREATE';
     createLink.style.cssText = `
         color: #ffffff;
         text-decoration: none;
