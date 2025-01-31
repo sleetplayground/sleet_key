@@ -27,11 +27,11 @@ npx web4-deploy web_playground key.sleet.near --nearfs
 
 get ipf url from last command
 ```sh
-near call <contract_id> <method_name> '{"url":"ipfs://bafybeig4p2xmu5or2irnyi6sjiir472busbswdegsk2jjyjnrmihle2rfe"}'
+near call <contract_id> <method_name> '{"url":"ipfs://bafybeidr3fmocmsvy4wkj2lpjuycbblxrqtipo3j76son5b6fxfhn4mwim"}'
 
-near call key.sleet.testnet web4_setStaticUrl  '{"url":"ipfs://bafybeig4p2xmu5or2irnyi6sjiir472busbswdegsk2jjyjnrmihle2rfe"}' --use-account  key.sleet.testnet
+near call key.sleet.testnet web4_setStaticUrl  '{"url":"ipfs://bafybeidr3fmocmsvy4wkj2lpjuycbblxrqtipo3j76son5b6fxfhn4mwim"}' --use-account  key.sleet.testnet
 
-near call key.sleet.near web4_setStaticUrl  '{"url":"ipfs://bafybeig4p2xmu5or2irnyi6sjiir472busbswdegsk2jjyjnrmihle2rfe"}' --use-account key.sleet.near
+near call key.sleet.near web4_setStaticUrl  '{"url":"ipfs://bafybeidr3fmocmsvy4wkj2lpjuycbblxrqtipo3j76son5b6fxfhn4mwim"}' --use-account key.sleet.near
 ```
 
 
@@ -51,4 +51,22 @@ git remotes
 ```sh
 git remote add github https://github.com/sleetplayground/sleet_key.git
 git push -u github main
+```
+
+
+near subaccunt setup
+
+```sh
+near create-account key.sleet.testnet --masterAccount sleet.testnet --initialBalance 1
+near create-account key.sleet.near --masterAccount sleet.near --initialBalance 0.5
+```
+
+remember to export account
+```sh
+# export
+near account export-account key.sleet.testnet
+near account export-account key.sleet.near
+
+#view
+near view-account 
 ```
