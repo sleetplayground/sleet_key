@@ -30,7 +30,7 @@ document.getElementById('create-keypair').addEventListener('click', async () => 
 
         const privateKeyValue = document.createElement('div');
         privateKeyValue.className = 'key-value';
-        privateKeyValue.textContent = Buffer.from(privateKey).toString('base64');
+        privateKeyValue.textContent = `ed25519:${privateKey}`;
 
         const warning = document.createElement('p');
         warning.className = 'warning-text';
