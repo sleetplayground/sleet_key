@@ -1,7 +1,7 @@
 # SLEET KEY
-Your one-stop shop for labeling your NEAR account public keys
+Your one-stop shop for labeling your NEAR account public keys, you can also generate ed25519 keypairs for NEAR development purposes.
 
-This is a web3 playground project by Nathan Renfroe & The SunShining that helps you manage and label your NEAR account public keys. This app does not collect any personal information.
+This is a repo is a part of the sleet playground project by Nathan Renfroe & The SunShining that helps you manage and label your NEAR account public keys. This app does not collect any personal information.
 
 
 ---
@@ -10,6 +10,7 @@ This is a web3 playground project by Nathan Renfroe & The SunShining that helps 
 - View public keys associated with any NEAR account
 - Create custom labels for your keys
 - Export key information as markdown files
+- Generate ed25519 keypairs for NEAR development purposes
 - No blockchain transactions or personal data storage
 
 ## How to Use
@@ -33,6 +34,12 @@ You can create a NEAR account for free using Meteor Wallet.
 ### Managing Keys
 - **Limited Access Keys**: Can be deleted through REF Finance
 - **Full Access Keys**: Can be managed through your wallet app
+
+### Key Creation Tool
+- Generate ed25519 keypairs for NEAR development and testing
+- Keypairs include both public and private keys
+- For development purposes only - not for creating NEAR accounts
+- Store generated private keys securely and never share them
 
 ### Important Safety Notes
 - Always maintain at least one full access key for your NEAR wallet account
