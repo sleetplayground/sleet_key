@@ -7,6 +7,7 @@ first deploy web4-min-contract
 ```sh
 near deploy key.sleet.testnet web4-min.wasm
 near deploy key.sleet.near web4-min.wasm
+near deploy sleetkey.near web4-min.wasm
 ```
 
 near cli network
@@ -18,10 +19,10 @@ echo $NEAR_ENV
 ```
 
 deploy
-(deployed fine to tesnet)
 ```sh
 npx web4-deploy web_playground key.sleet.testnet --nearfs
 npx web4-deploy web_playground key.sleet.near --nearfs
+npx web4-deploy web_playground sleetkey.near --nearfs
 ```
 - can be run with or without --nearfs
 
