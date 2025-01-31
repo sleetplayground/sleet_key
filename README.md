@@ -1,7 +1,7 @@
 # SLEET KEY
-Your one-stop shop for labeling your NEAR account public keys, you can also generate ed25519 keypairs for NEAR development purposes.
+Your one-stop shop for viewing/labeling your NEAR account public keys, you can also generate ed25519 keypairs for NEAR development purposes.
 
-This is a repo is a part of the sleet playground project by Nathan Renfroe & The SunShining that helps you manage and label your NEAR account public keys. This app does not collect any personal information.
+This is a repo is a part of the sleet playground project by Nathan Renfroe & The SunShining.
 
 
 ---
